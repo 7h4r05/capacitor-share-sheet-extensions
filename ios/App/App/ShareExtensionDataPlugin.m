@@ -10,5 +10,5 @@
 
 CAP_PLUGIN(ShareExtensionDataPlugin, "ShareExtensionDataPlugin",
            CAP_PLUGIN_METHOD(read, CAPPluginReturnPromise);
-           CAP_PLUGIN_METHOD(clear, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(clear, CAPPluginReturnNone);
 )
