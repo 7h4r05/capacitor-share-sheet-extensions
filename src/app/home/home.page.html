@@ -9,12 +9,28 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Capacitor share sheet extensions example # 1</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div>
+      <ion-buttons>
+        <ion-button primary (click)="read()">
+          Read
+        </ion-button>
+        <ion-button secondary (click)="clear()">
+          Clear
+        </ion-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h3>Result</h3>
+      <div *ngFor="let item of data">
+        <p>{{item.text}}</p>
+        <img [src]="item.image" />
+      </div>
+
+    </div>
   </div>
 </ion-content>
