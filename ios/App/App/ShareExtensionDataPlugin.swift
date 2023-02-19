@@ -23,8 +23,6 @@ public class ShareExtensionDataPlugin: CAPPlugin {
         let data = sdm.read()
         var result:[Any] = []
         
-        let fileManager = FileManager()
-        
         for item in data.items {
             let itemDict = [
                 "text": item.text,

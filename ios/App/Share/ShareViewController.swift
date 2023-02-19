@@ -36,7 +36,6 @@ class ShareViewController: SLComposeServiceViewController {
                         
                         let filmeManager = FileManager()
                         let fileExists = filmeManager.fileExists(atPath: imageURL.path!)
-                        print("File exists \(fileExists)")
                         let data = uiImage.jpegData(compressionQuality: 1.0)?.base64EncodedString() ?? ""
                         
                         sdm.write(image: "data:image/jpeg;base64,\(data)", text: self.contentText)
@@ -44,7 +43,7 @@ class ShareViewController: SLComposeServiceViewController {
 
                     } else {
                         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
-                        fatalError("Impossible to save image")
+                        fatalError("Impossible to read image")
                     }
                 }
             } else if provider.hasItemConformingToTypeIdentifier(imageType) {

@@ -79,7 +79,6 @@ class ShareDataManager {
                text: String) {
         do {
             if let dir = self.sharedContainerURL()  {
-                let filemanager = FileManager()
                 let jsonURL = dir.appendingPathComponent(file)
                 let encoder = JSONEncoder()
                 let data = self.read()

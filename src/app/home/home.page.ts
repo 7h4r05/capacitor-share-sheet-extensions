@@ -3,7 +3,6 @@ import {
   ShareDataItem,
 } from './../services/share-extension-data-plugin.service';
 import { Component } from '@angular/core';
-import { Capacitor } from '@capacitor/core';
 
 @Component({
   selector: 'app-home',
@@ -21,5 +20,6 @@ export class HomePage {
 
   async clear() {
     await this.shareService.clear();
+    this.data = [];
   }
 }
