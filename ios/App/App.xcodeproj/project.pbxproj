@@ -15,6 +15,10 @@
 		504EC3121FED79650016851F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 504EC3101FED79650016851F /* LaunchScreen.storyboard */; };
 		50B271D11FEDC1A000F3C39B /* public in Resources */ = {isa = PBXBuildFile; fileRef = 50B271D01FEDC1A000F3C39B /* public */; };
 		A084ECDBA7D38E1E42DFC39D /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF277DCFFFF123FFC6DF26C7 /* Pods_App.framework */; };
+		C60EC20929AFFDE1003ADB0F /* CategoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EC20829AFFDE1003ADB0F /* CategoriesManager.swift */; };
+		C60EC20A29AFFDE1003ADB0F /* CategoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EC20829AFFDE1003ADB0F /* CategoriesManager.swift */; };
+		C60EC20C29B00135003ADB0F /* CategoriesManagerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C60EC20B29B00135003ADB0F /* CategoriesManagerPlugin.m */; };
+		C60EC20E29B0013F003ADB0F /* CategoriesManagerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60EC20D29B0013F003ADB0F /* CategoriesManagerPlugin.swift */; };
 		C61E3D21299ED4A4001E57D3 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E3D20299ED4A4001E57D3 /* ShareViewController.swift */; };
 		C61E3D24299ED4A4001E57D3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61E3D22299ED4A4001E57D3 /* MainInterface.storyboard */; };
 		C61E3D28299ED4A4001E57D3 /* Share.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C61E3D1E299ED4A4001E57D3 /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -60,6 +64,9 @@
 		50B271D01FEDC1A000F3C39B /* public */ = {isa = PBXFileReference; lastKnownFileType = folder; path = public; sourceTree = "<group>"; };
 		AF277DCFFFF123FFC6DF26C7 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF51FD2D460BCFE21FA515B2 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
+		C60EC20829AFFDE1003ADB0F /* CategoriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesManager.swift; sourceTree = "<group>"; };
+		C60EC20B29B00135003ADB0F /* CategoriesManagerPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoriesManagerPlugin.m; sourceTree = "<group>"; };
+		C60EC20D29B0013F003ADB0F /* CategoriesManagerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesManagerPlugin.swift; sourceTree = "<group>"; };
 		C61E3D1E299ED4A4001E57D3 /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61E3D20299ED4A4001E57D3 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		C61E3D23299ED4A4001E57D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -138,6 +145,8 @@
 				C6AD071429A145B80059482E /* App-Bridging-Header.h */,
 				C6AD071529A145B80059482E /* Share-Bridging-Header.h */,
 				C6AD071929A145CB0059482E /* ShareExtensionDataPlugin.swift */,
+				C60EC20B29B00135003ADB0F /* CategoriesManagerPlugin.m */,
+				C60EC20D29B0013F003ADB0F /* CategoriesManagerPlugin.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -166,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C6AD070F299FB6300059482E /* ShareDataManager.swift */,
+				C60EC20829AFFDE1003ADB0F /* CategoriesManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -316,9 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60EC20C29B00135003ADB0F /* CategoriesManagerPlugin.m in Sources */,
+				C60EC20E29B0013F003ADB0F /* CategoriesManagerPlugin.swift in Sources */,
 				504EC3081FED79650016851F /* AppDelegate.swift in Sources */,
 				C6AD0710299FB6300059482E /* ShareDataManager.swift in Sources */,
 				C6AD071A29A145CB0059482E /* ShareExtensionDataPlugin.swift in Sources */,
+				C60EC20929AFFDE1003ADB0F /* CategoriesManager.swift in Sources */,
 				C6AD071729A145B80059482E /* ShareExtensionDataPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +342,7 @@
 			files = (
 				C61E3D21299ED4A4001E57D3 /* ShareViewController.swift in Sources */,
 				C6AD0711299FB6300059482E /* ShareDataManager.swift in Sources */,
+				C60EC20A29AFFDE1003ADB0F /* CategoriesManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

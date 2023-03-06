@@ -9,6 +9,7 @@ export class ShareData {
 export class ShareDataItem {
   text: string = '';
   image: string = '';
+  categoryId: number = -1;
 }
 
 export interface ShareExtensionDataPlugin {

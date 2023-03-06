@@ -6,9 +6,7 @@
 //
 
 import Capacitor
-
 import UniformTypeIdentifiers
-
 
 @objc(ShareExtensionDataPlugin)
 public class ShareExtensionDataPlugin: CAPPlugin {
@@ -24,9 +22,10 @@ public class ShareExtensionDataPlugin: CAPPlugin {
         var result:[Any] = []
         
         for item in data.items {
-            let itemDict = [
+            let itemDict: [String: Any] = [
                 "text": item.text,
-                "image": item.image
+                "image": item.image,
+                "categoryId": item.categoryId
             ]
             result.append(itemDict)
         }
