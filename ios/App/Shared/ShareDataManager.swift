@@ -25,10 +25,12 @@ class ShareData: Encodable, Decodable{
 class ShareDataItem: Encodable, Decodable {
     var text: String
     var image: String
+    var categoryId: Int
     
-    init(text: String, image: String) {
+    init(text: String, image: String, categoryId: Int) {
         self.text = text
         self.image = image
+        self.categoryId = categoryId
     }
 }
 
@@ -76,14 +78,14 @@ class ShareDataManager {
     }
     
     func write(image: String,
-               text: String) {
+               text: String,
+               categoryId: Int) {
         do {
             if let dir = self.sharedContainerURL()  {
                 let jsonURL = dir.appendingPathComponent(file)
                 let encoder = JSONEncoder()
                 let data = self.read()
-                let item = ShareDataItem(text: text, image: image)
-                
+                let item = ShareDataItem(text: text, image: image, categoryId: categoryId)
                 
                 data.items.append(item)
                 let json = try encoder.encode(data)

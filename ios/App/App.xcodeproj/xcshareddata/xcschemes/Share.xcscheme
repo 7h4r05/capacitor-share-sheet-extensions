@@ -57,6 +57,11 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
+      <RemoteRunnable
+         runnableDebuggingMode = "0"
+         BundleIdentifier = "modista.capacitor.share.example"
+         RemotePath = "/var/containers/Bundle/Application/C2FF7EA8-B5DC-423D-9593-AF77F365A489/App.app">
+      </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"

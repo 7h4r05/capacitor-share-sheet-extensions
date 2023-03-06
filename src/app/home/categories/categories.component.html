@@ -1,0 +1,15 @@
+<ion-item>
+  <ion-label>Add category</ion-label>
+  <ion-input [(ngModel)]="categoryName"></ion-input>
+  <ion-button (click)="add()">Add</ion-button>
+</ion-item>
+
+<ion-list>
+  <ion-item *ngFor="let category of categories">
+    {{category.text}} <ion-button (click)="remove(category.id)">Remove</ion-button>
+    <div *ngFor="let item of sharedItems | inCategory:category.id">
+      <h3>{{item.text}}</h3>
+      <img [src]="item.image"/>
+    </div>
+  </ion-item>
+</ion-list>

@@ -14,23 +14,6 @@
   </ion-header>
 
   <div id="container">
-    <div>
-      <ion-buttons>
-        <ion-button primary (click)="read()">
-          Read
-        </ion-button>
-        <ion-button secondary (click)="clear()">
-          Clear
-        </ion-button>
-      </ion-buttons>
-    </div>
-    <div>
-      <h3>Result</h3>
-      <div *ngFor="let item of data">
-        <p>{{item.text}}</p>
-        <img [src]="item.image" />
-      </div>
-
-    </div>
+    <rd-categories></rd-categories>
   </div>
 </ion-content>
