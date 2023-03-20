@@ -1,24 +1,24 @@
-import {
-  ShareDataItem,
-  ShareExtensionDataPluginService,
-} from './../../services/share-extension-data-plugin.service';
 import { Component } from '@angular/core';
 import {
-  CategoriesManagerPluginService,
-  Category,
-} from 'src/app/services/categories-manager-plugin.service';
+  IosCategoriesManagerPluginService,
+  IosCategory,
+} from 'src/app/services/ios-categories-manager-plugin.service';
+import {
+  IosShareDataItem,
+  IosShareExtensionDataPluginService,
+} from 'src/app/services/ios-share-extension-data-plugin.service';
 
 @Component({
-  templateUrl: 'categories.component.html',
-  selector: 'rd-categories',
+  templateUrl: 'ios-categories.component.html',
+  selector: 'rd-ios-categories',
 })
-export class CategoriesComponent {
-  categories: Category[] = [];
-  sharedItems: ShareDataItem[] = [];
+export class IosCategoriesComponent {
+  categories: IosCategory[] = [];
+  sharedItems: IosShareDataItem[] = [];
   categoryName = '';
   constructor(
-    private categoriesManager: CategoriesManagerPluginService,
-    private shareExtensionDataPluginService: ShareExtensionDataPluginService
+    private categoriesManager: IosCategoriesManagerPluginService,
+    private shareExtensionDataPluginService: IosShareExtensionDataPluginService
   ) {}
 
   async ngOnInit() {

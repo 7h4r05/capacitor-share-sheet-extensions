@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build;npx cap copy",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
@@ -22,15 +22,19 @@
     "@capacitor/android": "^4.6.3",
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.6.3",
+    "@capacitor/filesystem": "^4.1.4",
     "@capacitor/haptics": "4.1.0",
     "@capacitor/ios": "^4.6.3",
     "@capacitor/keyboard": "4.1.1",
+    "@capacitor/preferences": "^4.0.2",
     "@capacitor/status-bar": "4.1.1",
     "@ionic/angular": "^6.1.9",
-    "@ionic-native/ionic-webview": "^5.32.1",
+    "@types/uuid": "^9.0.1",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "uuid": "^9.0.0",
+    "uuid4": "^2.0.3",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

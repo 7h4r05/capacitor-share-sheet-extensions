@@ -1,0 +1,16 @@
+<ion-item>
+  <ion-label>Add category</ion-label>
+  <ion-input [(ngModel)]="categoryName"></ion-input>
+  <ion-button (click)="add()">Add</ion-button>
+</ion-item>
+
+<ion-list *ngIf="categories">
+  <div *ngFor="let category of categories">
+    <ion-item>
+      {{category.name}} <ion-button (click)="remove(category.id)">Remove</ion-button>
+    </ion-item>
+    <div *ngFor="let item of category.images">
+      <img [src]="item | imgNativeSrc"/>
+    </div>
+  </div>
+</ion-list>
