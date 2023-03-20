@@ -9,7 +9,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { InCategoryPipe } from './in-category.pipe';
 import { IosCategoriesComponent } from './ios-categories/ios-categories.component';
 import { AndroidShareHandlerModal } from './android-categories/android-share-handler/android-share-handler.modal';
-import { ImgNativeSrc } from './webview-img-src.pipe';
+import { ImgNativeSrcPipe } from './img-native-src.pipe';
 
 @NgModule({
   imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
@@ -19,7 +19,7 @@ import { ImgNativeSrc } from './webview-img-src.pipe';
     AndroidCategoriesComponent,
     HomePage,
     InCategoryPipe,
-    ImgNativeSrc,
+    ImgNativeSrcPipe,
   ],
 })
 export class HomePageModule {}
