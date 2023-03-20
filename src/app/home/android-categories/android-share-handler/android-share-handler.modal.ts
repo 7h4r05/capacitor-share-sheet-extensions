@@ -5,7 +5,6 @@ import { AndroidCategory } from 'src/app/services/android-storage.service';
 
 @Component({
   templateUrl: './android-share-handler.modal.html',
-  styleUrls: ['./android-share-handler.modal.scss'],
 })
 export class AndroidShareHandlerModal {
   @Input() uri: string = '';
