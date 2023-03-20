@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="cancel()">Cancel</ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="save()">save</ion-button>
+      </ion-buttons>
+      <ion-title>Save image</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div>
+      <ion-img [src]="imageUri"></ion-img>
+    </div>
+    <ion-item>
+      <ion-select [(ngModel)]="categorySelected">
+        <ion-select-option *ngFor="let category of categories" [value]="category.id">{{category.name}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+</ion-content>

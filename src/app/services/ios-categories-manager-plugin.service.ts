@@ -3,33 +3,33 @@ import { Capacitor, registerPlugin } from '@capacitor/core';
 
 const _pluginName: string = 'CategoriesManagerPlugin';
 
-export class Categories {
-  items: Category[] = [];
+export class IosCategories {
+  items: IosCategory[] = [];
 }
-export class Category {
+export class IosCategory {
   id: number = -1;
   text: string = '';
 }
 
-export interface CategoriesManagerPlugin {
+export interface IosCategoriesManagerPlugin {
   add(category: { text: string }): Promise<void>;
-  get(): Promise<Categories>;
+  get(): Promise<IosCategories>;
   remove(category: { id: number }): Promise<void>;
 }
 const CategoriesManagerPlugin =
-  registerPlugin<CategoriesManagerPlugin>(_pluginName);
+  registerPlugin<IosCategoriesManagerPlugin>(_pluginName);
 
 @Injectable({
   providedIn: 'root',
 })
-export class CategoriesManagerPluginService {
+export class IosCategoriesManagerPluginService {
   async add(text: string): Promise<void> {
     if (Capacitor.isPluginAvailable(_pluginName)) {
       return await CategoriesManagerPlugin.add({ text });
     }
   }
 
-  async read(): Promise<Category[] | []> {
+  async read(): Promise<IosCategory[] | []> {
     if (Capacitor.isPluginAvailable(_pluginName)) {
       return (await CategoriesManagerPlugin.get())?.items ?? [];
     }

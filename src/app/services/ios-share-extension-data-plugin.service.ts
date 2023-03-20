@@ -3,33 +3,33 @@ import { Capacitor, registerPlugin } from '@capacitor/core';
 
 const _pluginName: string = 'ShareExtensionDataPlugin';
 
-export class ShareData {
-  items: ShareDataItem[] = [];
+export class IosShareData {
+  items: IosShareDataItem[] = [];
 }
-export class ShareDataItem {
+export class IosShareDataItem {
   text: string = '';
   image: string = '';
   categoryId: number = -1;
 }
 
-export interface ShareExtensionDataPlugin {
+export interface IosShareExtensionDataPlugin {
   clear(): Promise<void>;
-  read(): Promise<ShareData>;
+  read(): Promise<IosShareData>;
 }
 const ShareExtensionDataPlugin =
-  registerPlugin<ShareExtensionDataPlugin>(_pluginName);
+  registerPlugin<IosShareExtensionDataPlugin>(_pluginName);
 
 @Injectable({
   providedIn: 'root',
 })
-export class ShareExtensionDataPluginService {
+export class IosShareExtensionDataPluginService {
   async clear(): Promise<void> {
     if (Capacitor.isPluginAvailable(_pluginName)) {
       await ShareExtensionDataPlugin.clear();
     }
   }
 
-  async read(): Promise<ShareDataItem[] | null> {
+  async read(): Promise<IosShareDataItem[] | null> {
     if (Capacitor.isPluginAvailable(_pluginName)) {
       return (await ShareExtensionDataPlugin.read())?.items ?? null;
     }
